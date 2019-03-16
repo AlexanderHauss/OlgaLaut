@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+	<meta charset="utf-8">
+	<title>Barkli Gallery</title>
+	<meta name="description" content="">
+	<meta name="keywords" content='' />
+	<meta class="viewport" name="viewport" content="width=1280, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="pinterest" content="nopin" />
+
+	<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<script>
+		window.onload = function(){
+			var links = document.querySelectorAll('a');
+			for(var i = 0; i < links.length; i++){
+				if(links[i].href.indexOf('?') !== -1) continue;
+				links[i].href = links[i].href + "?device=desktop";
+			}
+		}
+	</script>
+	<!-- Styles -->
+	<link type="text/css" href="assets/common/css/font-awesome.min.css" rel="stylesheet" media="screen" />
+	<link type="text/css" href="assets/public/css/main.css" rel="stylesheet" media="screen" />
+	<link type="text/css" href="assets/public/css/news.css" rel="stylesheet" media="screen" />
+	<link type="text/css" href="assets/public/css/interior-slider.css" rel="stylesheet">
+
+	<!-- Vars -->
+	<script type="application/javascript" defer>
+		var random_value = '88aa8aa42d3e48e73d89ba2b25e2b6e5';
+		var i18n = {
+			"show_map": "\u043f\u043e\u043a\u0430\u0437\u0430\u0442\u044c \u043d\u0430 \u043a\u0430\u0440\u0442\u0435",
+			"close_map": "\u0441\u043a\u0440\u044b\u0442\u044c \u043a\u0430\u0440\u0442\u0443",
+			"viewer_load_error": "\u041e\u0448\u0438\u0431\u043a\u0430 \u043f\u0440\u0438 \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u0435 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u044b.",
+			"floor_load_error": "\u041d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c \u044d\u0442\u0430\u0436.",
+			"environment_count_1": "\u041f\u043e\u043a\u0430\u0437\u0430\u043d\u043e ",
+			"environment_count_2": " \u043c\u0435\u0441\u0442 \u0438\u0437 "
+		};
+	</script>
+
+	<!-- Javascript -->
+	<script type="text/javascript" src="assets/common/js/mobile-detect.min.js"></script>
+	<!-- mobile detect -->
+
+	<script>
+		window.md = new MobileDetect(window.navigator.userAgent);
+		if (window.md.phone() && location.search !== "?device=desktop") {
+			window.location = "/mobile" + window.location.search;
+		}
+		
+		
+	</script>
+
+</head>
+
+<body class="loading">
+
+
+
+
+
+
+
+	<div class="grid">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+	<div class="barkli-gallery-floater js-bg-floater">
+		<a href="index.html" style="text-decoration: none">
+			<div class="title">Barkli Gallery</div>
+		</a></div>
+
+	<div class="main-menu-toggler js-main-menu-trigger">
+		<div class="hamburger">
+			<i></i>
+			<i></i>
+			<i></i>
+		</div>
+		<div class="caption">МЕНЮ</div>
+	</div>
+
+	<header class="top">
+		<div class="request-form-toggler-box">
+			<div class="request-form-toggler js-popup-request-form-trigger">оставить заявку</div>
+		</div>
+		<a id="comagic_phone_link" href="tel:+7 495 320-02-98" class="phone phone-toggler">+7 495 320-02-98</a>
+		<div class="callback-button" id="asdqwezxc">
+			<div class="callback-button__svg-wrapper">
+				<svg class="callback-button__svg" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+					<g>
+						<circle cx="40" cy="40" r="35" fill="#F46244" />
+						<g fill="#FFFFFF" transform="translate(20 20)">
+							<path d="M1,0 L19,0 C19.5522847,-1.01453063e-16 20,0.44771525 20,1 L20,35.6666667 C20,36.2189514 19.5522847,36.6666667 19,36.6666667 L1,36.6666667 L1,36.6666667 C0.44771525,36.6666667 3.99185455e-15,36.2189514 0,35.6666667 L0,1 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 L1,0 Z M10,35 C10.9204746,35 11.6666667,34.2538079 11.6666667,33.3333333 C11.6666667,32.4128588 10.9204746,31.6666667 10,31.6666667 C9.07952542,31.6666667 8.33333333,32.4128588 8.33333333,33.3333333 C8.33333333,34.2538079 9.07952542,35 10,35 Z M1.66666667,5 L1.66666667,30 L18.3333333,30 L18.3333333,5 L1.66666667,5 Z"
+							 transform="rotate(45 12.964 31.297)" />
+							<path fill-rule="nonzero" d="M11.6666667,5.83333333 C8.44500563,5.83333333 5.83333333,8.44500563 5.83333333,11.6666667 C5.83333333,12.126904 6.20642938,12.5 6.66666667,12.5 C7.12690396,12.5 7.5,12.126904 7.5,11.6666667 C7.5,9.36548021 9.36548021,7.5 11.6666667,7.5 C12.126904,7.5 12.5,7.12690396 12.5,6.66666667 C12.5,6.20642938 12.126904,5.83333333 11.6666667,5.83333333 Z" />
+							<path fill-rule="nonzero" d="M10.8333333,1.66666667 C5.77072313,1.66666667 1.66666667,5.77072313 1.66666667,10.8333333 C1.66666667,11.2935706 2.03976271,11.6666667 2.5,11.6666667 C2.96023729,11.6666667 3.33333333,11.2935706 3.33333333,10.8333333 C3.33333333,6.69119771 6.69119771,3.33333333 10.8333333,3.33333333 C11.2935706,3.33333333 11.6666667,2.96023729 11.6666667,2.5 C11.6666667,2.03976271 11.2935706,1.66666667 10.8333333,1.66666667 Z" />
+							<path fill-rule="nonzero" d="M33.3333333,27.5 C30.1116723,27.5 27.5,30.1116723 27.5,33.3333333 C27.5,33.7935706 27.873096,34.1666667 28.3333333,34.1666667 C28.7935706,34.1666667 29.1666667,33.7935706 29.1666667,33.3333333 C29.1666667,31.0321469 31.0321469,29.1666667 33.3333333,29.1666667 C33.7935706,29.1666667 34.1666667,28.7935706 34.1666667,28.3333333 C34.1666667,27.873096 33.7935706,27.5 33.3333333,27.5 Z"
+							 transform="rotate(180 30.833 30.833)" />
+							<path fill-rule="nonzero" d="M37.5,28.3333333 C32.4373898,28.3333333 28.3333333,32.4373898 28.3333333,37.5 C28.3333333,37.9602373 28.7064294,38.3333333 29.1666667,38.3333333 C29.626904,38.3333333 30,37.9602373 30,37.5 C30,33.3578644 33.3578644,30 37.5,30 C37.9602373,30 38.3333333,29.626904 38.3333333,29.1666667 C38.3333333,28.7064294 37.9602373,28.3333333 37.5,28.3333333 Z"
+							 transform="rotate(180 33.333 33.333)" />
+						</g>
+					</g>
+				</svg>
+			</div>
+		</div>
+	</header>
+
+	<div id="popup-policy">
+		<div class="arr close js-close">
+			<svg class="circle">
+				<use xlink:href="#circle"></use>
+			</svg>
+			<svg class="icon">
+				<use xlink:href="#close"></use>
+			</svg>
+		</div>
+		<div class="container dbl-pad">
+			<div class="scroll-box">
+				<div class="title-block">
+					<h2>Условия передачи<br> информации</h2>
+				</div>
+				<div class="policy-text mCustomScrollbar">
+					<div class="description-text">
+						<p>В соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных», я свободно, своей волей и
+							в своем интересе даю согласие на осуществление «Мосинвестстрой» (Закрытое акционерное общество) (далее –
+							Общество), место нахождения: 119071, г. Москва, пр. Ленинский, д. 15А, обработки указанных в настоящем обращении
+							моих персональных данных (сбора, записи, систематизации, накопления, хранения, уточнения (обновления,
+							изменения), извлечения, использования, передачи, обезличивания, блокирования и уничтожения) с использованием/без
+							использования средств автоматизации в целях обработки настоящего электронного обращения и направления/
+							предоставления ответа.</p>
+						<p>Предоставленные в Общество персональные данные подлежат уничтожению, либо обезличиванию по достижении
+							указанных целей обработки или в случае утраты необходимости в достижении этих целей. Я понимаю и соглашаюсь с
+							тем, что для прекращения использования Обществом моих персональных данных, мне необходимо обратиться в Общество
+							для оформления отзыва Согласия на обработку моих персональных данных. В случае отзыва согласия на обработку
+							персональных данных Общество вправе продолжить обработку персональных данных без моего согласия при наличии
+							оснований, указанных в п. 2-11 ч. 1 ст. 6, ч. 2 ст. 10, ч. 2 ст. 11 Федерального закона от 27.07.2006 № 152-ФЗ
+							«О персональных данных».</p>
+						<p>Согласен(-на) с тем, что Общество в целях уточнения информации, содержащейся в обращении, и информирования о
+							ходе рассмотрения настоящего обращения может использовать сведения, содержащиеся в настоящем электронном
+							обращении. Общество доводит Вашего сведения, что электронные обращения, направленные через сеть Интернет,
+							передаются по незащищенным каналам связи. Общество не несет ответственности за сохранение конфиденциальности
+							данных при их передаче через сеть Интернет.</p>
+					</div>
+				</div>
+				<div class="button-accept"><span>согласен с условиями</span></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="main-menu">
+
+		<div class="menu-box js-menu-box">
+			<div class="menu">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="index.html">Главная</a>
+					</li>
+					<li>
+						<a href="public/visual.html">Выбор квартиры</a>
+					</li>
+					<li>
+						<a href="environment.html">Окружение</a>
+					</li>
+					<li>
+						<a href="tech.html">Тех. характеристики</a>
+					</li>
+					<li>
+						<a href="process.html">Ход строительства</a>
+					</li>
+					<li>
+						<a href="documentation.html">Документация</a>
+					</li>
+					<li class="active">
+						<a href="news.html">Новости</a>
+					</li>
+					<li>
+						<a href="contact.html">Контакты</a>
+					</li>
+				</ul>
+			</div>
+			<div class="sub-menu">
+				<a class="presentation" target="_blank" href="uploads/files/presentation/fc737718068cfbf2d5203d3111ab1944.pdf"
+				 download="presentation"><span>СКАЧАТЬ ПРЕЗЕНТАЦИЮ</span><span class="sep"></span><span>4,08 МБ</span></a>
+				<form class="search-box js-search-box" action="https://yandex.ru/search/site/" method="GET">
+					<input type="hidden" name="lr" value="213" />
+					<input type="hidden" name="searchid" value="2300657" />
+					<input type="text" name="text" value="" />
+					<div class="search-trigger js-search-trigger">ПОИСК ПО САЙТУ</div>
+					<button class="search">ИСКАТЬ</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="site-box js-site-box">
+			<div class="site"></div>
+		</div>
+
+		<div class="language">
+			<span>РУ</span> <span class="sep"></span>
+			<a href="news1772.html?back_url=aHR0cDovL2JhcmtsaWdhbGxlcnkucnUvbmV3cz9xPSUyRm5ld3M*">EN</a> </div>
+
+	</div>
+
+	<div id="request-form" class="js-popup-request-form">
+
+		<div class="left-panel js-left-panel">
+			<h2>Запишитесь<br />на закрытый<br />показ</h2>
+			<!--		<span class="come">-->
+			<!--</span>-->
+			<span class="sep"></span>
+
+			<h2>ОФИС<br> ПРОДАЖ</h2>
+
+			<div class="address">Москва, Лаврушинский пер., 17, стр. 2</div>
+			<div class="phone comagic_phone2_link">+7 495 320-02-98</div>
+		</div>
+
+		<div class="right-panel js-right-panel">
+			<div class="form-wrap">
+				<form action="http://barkligallery.ru/send/request_form.json" method="POST">
+					<div class="thank-box">
+						<div class="thank-title">Спасибо</div>
+						<div class="thank-note">Мы свяжемся с Вами в ближайшее время</div>
+					</div>
+					<div class="title"></div>
+
+					<fieldset>
+
+						<div class="input brd name">
+							<input type="text" name="name" value="" data-validator="name" />
+							<span class="placeholder">Ваше имя</span>
+						</div>
+
+						<div class="input brd phone">
+							<input type="text" name="phone" value="" data-validator="phone" />
+							<span class="placeholder">Телефон</span>
+						</div>
+
+						<div class="input brd message">
+							<input type="text" name="message" />
+							<span class="placeholder">Расскажите, что вас интересует</span>
+						</div>
+
+					</fieldset>
+
+					<fieldset>
+						<div class="input checkbox agree js-checkbox modal-check">
+							<input id="popup_rf_agree_cb" type="checkbox" name="agree" value="1" data-validator="agree" />
+							<label for="popup_rf_agree_cb">Я согласен с <a href="#" class="js-popup-policy-trigger" data-accept="modal-check"
+								 onclick="window.event.preventDefault();return false;">условиями передачи информации</a></label>
+						</div>
+					</fieldset>
+
+					<button class="submit">
+						<div class="caption js-caption"><span>оставить заявку</span></div>
+						<div class="check js-check">
+							<svg>
+								<use xlink:href="#check"></use>
+							</svg>
+						</div>
+						<div class="line-box js-line">
+							<div class="line"></div>
+						</div>
+					</button>
+
+				</form>
+			</div>
+
+			<div class="arr close js-close">
+				<svg class="circle">
+					<use xlink:href="#circle"></use>
+				</svg>
+				<svg class="icon">
+					<use xlink:href="#close"></use>
+				</svg>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="slider-popup" style="display: none">
+
+	</div>
+
+	<div id="email-form" class="js-popup-email-form">
+		<div class="right-panel js-right-panel">
+			<div class="form-wrap">
+				<form action="http://barkligallery.ru/send/request_email_form.json" method="POST">
+					<div class="thank-box">
+						<div class="thank-title">Спасибо</div>
+						<div class="thank-note">Мы отправили письмо на вашу почту</div>
+					</div>
+					<div class="title"></div>
+
+					<fieldset>
+						<div class="input brd email">
+							<input type="text" name="email" value="" data-validator="email" />
+							<input type="hidden" name="flat_id" value="" />
+							<span class="placeholder">E-mail</span>
+						</div>
+					</fieldset>
+
+					<fieldset>
+						<div class="input checkbox agree js-checkbox email-check">
+							<input id="email_plan_agree_cb" type="checkbox" name="agree" value="1" data-validator="agree" autocomplete="off" />
+							<label for="email_plan_agree_cb">Я согласен с
+								<a href="#" class="js-popup-policy-trigger" data-accept="email-check" onclick="window.event.preventDefault();return false;">условиями
+									передачи информации</a></label>
+						</div>
+					</fieldset>
+
+					<button class="submit">
+						<div class="caption js-caption"><span>отправить планировку на почту</span></div>
+						<div class="check js-check"><svg>
+								<use xlink:href="#check"></use>
+							</svg></div>
+						<div class="line-box js-line">
+							<div class="line"></div>
+						</div>
+					</button>
+
+				</form>
+			</div>
+		</div>
+		<div class="arr close js-close">
+			<svg class="circle">
+				<use xlink:href="#circle"></use>
+			</svg>
+			<svg class="icon">
+				<use xlink:href="#close"></use>
+			</svg>
+		</div>
+	</div>
+
+
+
+	<div id="screen" class="contentFixed">
+		<div id="content">
+			<section class="news-block">
+				<div class="container dbl-pad">
+					<h2>Новости<br />Barkli gallery</h2>
+
+					<div class="news-list">
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/tatler-provel-novogodnyuyu-elku-pri-podderzhke-korporacii-barkli">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/5f6e3e809cdbc47e5c7732b0c8b08b19.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">10.12.2018</div>
+								<div class="title">Tatler провел новогоднюю ёлку при поддержке корпорации Barkli</div>
+								<div class="descr">
+									<p>В субботу, 8 декабря состоялось одно из главных светских семейных мероприятий – новогодняя ёлка журнала
+										Tatler, которая, как обычно, проходила в доме Спиридонова.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/barkli-gallery-v-proekte-moskvadorogaya">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/8dd24b107e2c3411062359c38bcaa5df.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">07.12.2018</div>
+								<div class="title">Barkli Gallery в проекте «Москва, дорогая»</div>
+								<div class="descr">
+									<p>Можно ли возродить воспоминания об эпохе русского модерна, при этом не потеряв дух современности, как стать
+										завидным обладателем настоящего шедевра и что придётся по вкусу даже самым искушенным ценителям прекрасного –
+										смотрите в выпуске «Москва, дорогая».</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/proekt-barkli-gallery-stal-pobeditelem-urban-awards-2018">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/e26879a7c36978892589cfd27194d288.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">05.12.2018</div>
+								<div class="title">Проект Barkli Gallery стал победителем Urban Awards 2018</div>
+								<div class="descr">
+									<p>В четверг, 22 ноября прошла 10-я церемония награждения самой престижной российской премии недвижимости
+										Urban Awards 2018.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/korporaciya-barkli-poluchila-dve-premii-na-prestizhnom-awwwards">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/51aa149f2e1f3d1cfa9695df6b26131b.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">21.11.2018</div>
+								<div class="title">Корпорация «Баркли» получила две премии на престижном Awwwards*</div>
+								<div class="descr">
+									<p>Поздравляем команду проекта Barkli Gallery с наградами сразу в трех в номинациях «Site of the day»,
+										«Honorable Mention» и «Developer Award»!</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/zavershaetsya-rabota-nad-fasadami-barkli-gallery">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/3bcbe2656ae3b6272da58ed7b6741f2d.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">01.10.2018</div>
+								<div class="title">Завершается работа над фасадами Barkli Gallery</div>
+								<div class="descr">
+									<p>В облицовке использован норвежский лабрадорит, португальский известняк и английская глазурованная плитка.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/olga-sviblova-posetila-shou-rum-barkli-gallery">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/15bdf02630f3dfb0d04d780eaf5d9170.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">28.09.2018</div>
+								<div class="title">Ольга Свиблова посетила шоу-рум Barkli Gallery</div>
+								<div class="descr">
+									<p>Искусствовед, кинорежиссёр и директор Мультимедиа Арт Музея рассказала, как фотографии «живут» в интерьере
+										и взаимодействуют со зрителем и пространством.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/dve-nagrady-wow-awards-2018-za-proekt-barkli-gallery">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/2d6f45d22ad6387556dab9b0f1fe1478.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">06.09.2018</div>
+								<div class="title">Две награды WOW AWARDS 2018 за проект Barkli&nbsp;Gallery</div>
+								<div class="descr">
+									<p>6&nbsp;сентября состоялась торжественная церемония награждения номинантов премии&nbsp;WOW&nbsp;AWARDS 2018.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/25-letie-korporacii-barkli">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/5760955f06a45e6b811ec9be304f6976.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">08.08.2018</div>
+								<div class="title">25-летие корпорации «Баркли»</div>
+								<div class="descr">
+									<p>В этом году нашей компании исполнилось 25 лет.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/barkli-gallery-nepovtorimyj-produkt-s-unikalnoj-koncepciej">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/d9ee578bc4ad0d2163906acb28ee4834.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">31.07.2018</div>
+								<div class="title">Barkli Gallery — неповторимый проект с&nbsp;уникальной концепцией</div>
+								<div class="descr">
+									<p>В 2018 году «Баркли» закончит один из лучших проектов за всю 25-летнюю историю Корпорации &mdash;
+										несомненно, бриллиант Замоскворечья.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/znamenitoe-kaslinskoe-lite-v-intererah-barkli-gallery">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/0716460afbb0442fc5dbc9aac25af2c7.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">27.06.2018</div>
+								<div class="title">Знаменитое каслинское литье в интерьерах Barkli Gallery</div>
+								<div class="descr">
+									<p>Клубный дом Barkli Gallery находится на стадии отделки.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/besprincypnye-chteniya-ot-aleksandra-cypkina-i-anny-mihalkovoj-dlya-gostej-barkli-gallery">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/802ad632ff9e0300e6e004e26cd1ccb8.png"
+									 width="734" height="393" alt=""></div>
+								<div class="date">30.05.2018</div>
+								<div class="title">«БеспринцЫпные чтения» от Александра Цыпкина и Анны Михалковой для гостей <br>Barkli Gallery</div>
+								<div class="descr">
+									<p>Вчера, 29 мая, в офисе продаж Barkli Gallery состоялось совместное мероприятие Корпорации «Баркли» и
+										агентства элитной недвижимости Kalinka Group.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/pervye-lica-barkli-na-pmef-2018">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/958c1468ad4dcdee5233ced183582a5b.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">26.05.2018</div>
+								<div class="title">ПЕРВЫЕ ЛИЦА «БАРКЛИ» НА ПМЭФ-2018</div>
+								<div class="descr">
+									<p>Корпорация «Баркли» приняла участие в&nbsp;22-м Петербургском международном экономическом форуме, который
+										прошел с&nbsp;24&nbsp;по&nbsp;26&nbsp;мая. В&nbsp;ПМЭФ-2018 приняли участие 17&nbsp;тысяч человек
+										из&nbsp;143&nbsp;стран.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/neobychnyj-videoproekt-v-ramkah-raboty-nad-barkli-gallery">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/e57cb38f9af3952c8196912a98f2c99e.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">23.05.2018</div>
+								<div class="title">Необычный видеопроект в рамках работы над Barkli Gallery</div>
+								<div class="descr">
+									<p>Короткометражный фильм развивает концепцию проекта и продолжает идею фирменного стиля, построенного на
+										образе хранителя дома.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="news.html">
+								<div class="date">11.05.2018</div>
+								<div class="title">ЛЕОНИД КАЗИНЕЦ, ПРЕДСЕДАТЕЛЬ ПРАВЛЕНИЯ КОРПОРАЦИИ «БАРКЛИ», ПРИНЯЛ УЧАСТИЕ В АВТОРСКОЙ
+									ПРОГРАММЕ ВИКТОРИИ ГИЛВАРГ «БИЗНЕС-ЛАНЧ».</div>
+								<div class="descr">
+									<p>Леонид Казинец, председатель правления Корпорации «Баркли», принял участие в авторской программе Виктории
+										Гилварг «Бизнес-ланч».</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="news.html">
+								<div class="date">11.04.2018</div>
+								<div class="title">ЛЕОНИД КАЗИНЕЦ НАГРАЖДЕН ПОЧЕТНОЙ ГРАМОТОЙ, ПОДПИСАННОЙ ПРЕЗИДЕНТОМ РОССИЙСКОЙ ФЕДЕРАЦИИ В.
+									В. ПУТИНЫМ.</div>
+								<div class="descr">
+									<p>11 апреля 2018 года Председатель правления Корпорации «Баркли» Леонид Казинец награжден почетной грамотой,
+										подписанной президентом Российской Федерации В. В. Путиным.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/100-samyh-stilnyh-po-versii-zhurnala-gq">
+								<div class="date">02.04.2018</div>
+								<div class="title">"100 САМЫХ СТИЛЬНЫХ" ПО ВЕРСИИ ЖУРНАЛА GQ</div>
+								<div class="descr"></div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/v-shou-rume-proekta-proshla-prezentaciya-penthausov-barkli-gallery">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/92e960346e84f50b2458e5d2353d8368.png"
+									 width="734" height="393" alt=""></div>
+								<div class="date">15.02.2018</div>
+								<div class="title">В шоу-руме проекта прошла презентация пентхаусов Barkli Gallery</div>
+								<div class="descr">
+									<p>О концепции четырёх уникальных пентхаусов рассказал создатель интерьеров – ведущий
+										дизайнер&nbsp;Aеdas&nbsp;Тим Шеперд.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/zaversheny-raboty-po-vozvedeniyu-konstruktiva-klubnogo-doma-barkli-gallery">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/c20240d03547c2e86974632f00d89876.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">04.12.2017</div>
+								<div class="title">Завершены работы по возведению конструктива клубного дома Barkli Gallery</div>
+								<div class="descr">
+									<p>Корпорация «Баркли» полностью завершила возведение железобетонного монолитного конструктива семиэтажного
+										здания и подземного двухуровневого паркинга.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="http://barkligallery.ru/news/item/barkli-gallery-i-barkli-medovaya-dolina-stali-pobeditelyami-urban-awards-2017">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/788b39cbeb97b5c4db347ccd0dcbf948.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">23.11.2017</div>
+								<div class="title">Barkli Gallery и «Баркли Медовая долина» стали победителями Urban Awards 2017</div>
+								<div class="descr">
+									<p>Проект Barkli Gallery стал победителем URBAN AWARDS 2017 в номинации «Лучший строящийся жилой комплекс
+										элит-класса»!</p>
+									<p>&nbsp;
+									</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="news/item/barkli-gallery-wins-two-categories-in-european-property-awards-2017-2018.html">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/a129b43468937c656f65948bd3256e24.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">01.11.2017</div>
+								<div class="title">Победа в двух номинациях премии European Property Awards 2017-2018</div>
+								<div class="descr">
+									<p>Проект&nbsp;Barkli&nbsp;Gallery&nbsp;получил награды в
+										категории&nbsp;Architecture&nbsp;Multiple&nbsp;Residence&nbsp;и в&nbsp;Development&nbsp;Marketing&nbsp;за
+										маркетинговую концепцию.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="news/item/barkli-gallery-the-proestate-awards-2017-winner.html">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/3ac94029b836cf393cbf484af0e378b2.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">15.09.2017</div>
+								<div class="title">Barkli Gallery — победитель PROESTATE AWARDS 2017</div>
+								<div class="descr">
+									<p>Клубный дом Barkli Gallery стал победителем в номинации «Lifestyle. Лучший проект в сфере элитного
+										строительства столицы».</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="news/item/barkli-gallery-project-wins-wow-awards-2017-in-2-nominations.html">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/731653eb1066299ad53c119140977531.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">07.09.2017</div>
+								<div class="title">Проект клубного дома Barkli Gallery получил две награды WOW Awards 2017</div>
+								<div class="descr">
+									<p>7 сентября прошла торжественная церемония награждения финалистов премии. Среди 356 работ, заявленных на
+										конкурс, были выбраны самые лучшие, яркие и оригинальные. Победа досталась компании «Баркли» в номинациях
+										«Офис продаж» и «Сувенирная продукция».</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="news.html">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/30a9cf570d74f1f1a1180bb985a853d4.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">06.09.2017</div>
+								<div class="title">Ипотека Газпромбанка на квартиры Barkli Gallery</div>
+								<div class="descr">
+									<p>Уважаемые дамы и господа, корпорация «Баркли» рада предложить вам возможность использования ипотечного
+										кредитования при покупке квартир в клубном доме Barkli Gallery.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="news/item/the-opening-of-the-barkli-gallery-showroom.html">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/15cbde537cd087a027d71ebca1636515.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">15.06.2017</div>
+								<div class="title">Сегодня начал работу шоу-рум Barkli Gallery</div>
+								<div class="descr">
+									<p>Офис продаж и одновременно шоу-рум клубного дома Barkli Gallery находится в Лаврушинском переулке на первом
+										этаже Дома писателей, который вплотную примыкает к возводимому зданию. Вход в офис расположен напротив
+										Инженерного корпуса Третьяковской галереи, которая является партнером «Баркли».</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="news/item/marcel-wanders-created-the-interior-for-the-barkli-gallery-lobby.html">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/f973bb231772aa1c166e42064e9badcf.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">08.06.2017</div>
+								<div class="title">МАРСЕЛЬ ВАНДЕРС РАЗРАБОТАЛ ИНТЕРЬЕР ЛОББИ BARKLI GALLERY</div>
+								<div class="descr">
+									<p>8&nbsp;июня в&nbsp;ресторане «ЦДЛ» прошел закрытый пресс-бранч, приуроченный к&nbsp;приезду в&nbsp;Москву
+										знаменитого голландского дизайнера Марселя Вандерса, который работает над дизайном лобби Barkli Gallery. Это
+										первый проект Вандерса в&nbsp;России.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+						<div class="item">
+							<a href="news/item/leading-russian-media-report-on-the-barkli-gallery-project.html">
+								<div class="image"><img onerror="this.src='assets/public/images/placeholders/125x125.png'" src="uploads/images/article/small/a56e587fb14667b501908539da14b643.jpg"
+									 width="734" height="393" alt=""></div>
+								<div class="date">31.03.2017</div>
+								<div class="title">ВЕДУЩИЕ СМИ РОССИИ РАССКАЗАЛИ О ПРОЕКТЕ BARKLI GALLERY</div>
+								<div class="descr">
+									<p>Ведущие российские СМИ рассказали читателям о&nbsp;новом люксовом проекте «Баркли»&nbsp;&mdash; Barkli
+										Gallery. Корпорация «Баркли» начала строительство клубного дома Barkli Gallery в&nbsp;центре Москвы,
+										в&nbsp;районе Замоскворечья, в&nbsp;партнерстве с&nbsp;Третьяковской галереей. Общие инвестиции в&nbsp;проект
+										составят 4,2 млрд руб.»,&nbsp;&mdash; пишет газета «Ведомости» в&nbsp;четверг.</p>
+								</div>
+								<div class="link">Читать</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<section class="footer-compensator"></section>
+	<section class="index-footer js-index-footer">
+		<div class="translator">
+			<div class="container">
+				<ul class="footer-menu">
+					<li><a href="news.html">Новости</a></li>
+					<li><a href="process.html">Ход строительства</a></li>
+					<li><a href="documentation.html">Документы</a></li>
+					<li><a href="tech.html">Технические характеристики</a></li>
+				</ul>
+
+				<p class="copyright">Любая информация, представленная на&nbsp;данном сайте, носит исключительно информационный
+					характер<br />и&nbsp;ни&nbsp;при каких условиях не&nbsp;является публичной офертой, определяемой положениями
+					статьи 437&nbsp;ГК РФ.</p>
+
+				<p class="copyright">© 2017 – 2018 «Barkli Gallery»</p>
+
+				<div class="language">
+					<span>РУ</span> <span class="sep"></span>
+					<a href="news1772.html?back_url=aHR0cDovL2JhcmtsaWdhbGxlcnkucnUvbmV3cz9xPSUyRm5ld3M*">EN</a> </div>
+			</div>
+
+			<div class="footer-logo-box">
+				<svg class="logo-barkli">
+					<use xlink:href="#logo-barkli"></use>
+				</svg>
+				<p class="developer">Дизайн и разработка &mdash;
+					<a href="http://www.greencow.ru/" target="_blank" rel="nofollow">Greencow</a></p>
+			</div>
+
+			<div class="joker js-footer-joker">
+				<div class="joker-box js-joker-box"><img src="assets/public/images/first-joker.png"></div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<div class="BarkliLoader js-barkli-loader">
+		<div class="loader-line js-loader-line"></div>
+	</div>
+
+	<script type="text/javascript" src="assets/public/js/news.js"></script>
+
+
+
+	<script>
+		(function (t) {
+			var r = new XMLHttpRequest();
+			r.open('GET.html', 'assets/common/svg/sprite.svg', true);
+			r.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+			r.onreadystatechange = function () {
+				if (r.readyState !== 4) return void 0;
+				var lz = document.getElementById('LZ');
+				if (!lz) {
+					document.createElement('DIV');
+					lz.id = 'LZ';
+					lz.className = 'LZ';
+					t.appendChild(lz);
+				};
+				var d = document.createElement('DIV');
+				d.innerHTML = r.responseText;
+				lz.appendChild(d);
+			};
+			r.send();
+		})(document.body);
+	</script>
+
+
+	<script>
+		(function (E, n, G, A, g, Y, a) {
+			E['EngLandingObject'] = g;
+			E[g] = E[g] || function () {
+				(E[g].q = E[g].q || []).push(arguments)
+			}, E[g].l = 1 * new Date();
+			Y = n.createElement(G), a = n.getElementsByTagName(G)[0];
+			Y.async = 1;
+			Y.src = A;
+			a.parentNode.insertBefore(Y, a)
+		})(window, document, 'script', '../widget.engageya.com/eng_landing.js', '__engLanding');
+		__engLanding('createPixel', {
+			pixelid: 185459,
+			dtms: 2000
+		});
+	</script>
+
+	<script src="assets/public/js/interior-slider.js"></script>
+
+</body>
+
+</html>

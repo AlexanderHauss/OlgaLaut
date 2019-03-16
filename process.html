@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+	<meta charset="utf-8">
+	<title>GALLERY O!LAUT</title>
+	<meta name="description" content="">
+	<meta name="keywords" content='' />
+	<meta class="viewport" name="viewport" content="width=1280, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="pinterest" content="nopin" />
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+	<script>
+		window.onload = function(){
+			var links = document.querySelectorAll('a');
+			for(var i = 0; i < links.length; i++){
+				if(links[i].href.indexOf('?') !== -1) continue;
+				links[i].href = links[i].href + "?device=desktop";
+			}
+		}
+	</script>
+	<!-- Styles -->
+	<link type="text/css" href="assets/common/css/font-awesome.min.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="assets/public/css/main.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="assets/public/css/process.css" rel="stylesheet" media="screen" />
+	<link type="text/css" href="assets/public/css/interior-slider.css" rel="stylesheet" >
+
+	
+	<!-- Javascript -->
+	<script type="text/javascript" src="assets/common/js/mobile-detect.min.js"></script>
+	<!-- mobile detect -->
+	
+	<script>
+		window.md = new MobileDetect(window.navigator.userAgent);
+		if (window.md.phone() && location.search !== "?device=desktop") {
+			window.location = "/mobile" + window.location.search;
+		}
+		
+		
+	</script>
+
+
+</head>
+
+<body class="loading">
+
+
+
+
+
+
+
+<div class="grid">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+
+<div class="barkli-gallery-floater js-bg-floater">
+	<a href="index.html" style="text-decoration: none">
+		<div class="title">Barkli Gallery</div>
+	</a></div>
+
+<div class="main-menu-toggler js-main-menu-trigger">
+	<div class="hamburger">
+		<i></i>
+		<i></i>
+		<i></i>
+	</div>
+	<div class="caption">МЕНЮ</div>
+</div>
+
+<header class="top">
+	<div class="request-form-toggler-box">
+		<div class="request-form-toggler js-popup-request-form-trigger">оставить заявку</div>
+	</div>
+	<a id="comagic_phone_link" href="tel:+7 495 320-02-98" class="phone phone-toggler">+7 495 320-02-98</a>
+<div class="callback-button" id="asdqwezxc">
+	<div class="callback-button__svg-wrapper">
+		<svg class="callback-button__svg" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+			<g>
+				<circle cx="40" cy="40" r="35" fill="#F46244"/>
+				<g fill="#FFFFFF" transform="translate(20 20)">
+					<path d="M1,0 L19,0 C19.5522847,-1.01453063e-16 20,0.44771525 20,1 L20,35.6666667 C20,36.2189514 19.5522847,36.6666667 19,36.6666667 L1,36.6666667 L1,36.6666667 C0.44771525,36.6666667 3.99185455e-15,36.2189514 0,35.6666667 L0,1 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 L1,0 Z M10,35 C10.9204746,35 11.6666667,34.2538079 11.6666667,33.3333333 C11.6666667,32.4128588 10.9204746,31.6666667 10,31.6666667 C9.07952542,31.6666667 8.33333333,32.4128588 8.33333333,33.3333333 C8.33333333,34.2538079 9.07952542,35 10,35 Z M1.66666667,5 L1.66666667,30 L18.3333333,30 L18.3333333,5 L1.66666667,5 Z" transform="rotate(45 12.964 31.297)"/>
+					<path fill-rule="nonzero" d="M11.6666667,5.83333333 C8.44500563,5.83333333 5.83333333,8.44500563 5.83333333,11.6666667 C5.83333333,12.126904 6.20642938,12.5 6.66666667,12.5 C7.12690396,12.5 7.5,12.126904 7.5,11.6666667 C7.5,9.36548021 9.36548021,7.5 11.6666667,7.5 C12.126904,7.5 12.5,7.12690396 12.5,6.66666667 C12.5,6.20642938 12.126904,5.83333333 11.6666667,5.83333333 Z"/>
+					<path fill-rule="nonzero" d="M10.8333333,1.66666667 C5.77072313,1.66666667 1.66666667,5.77072313 1.66666667,10.8333333 C1.66666667,11.2935706 2.03976271,11.6666667 2.5,11.6666667 C2.96023729,11.6666667 3.33333333,11.2935706 3.33333333,10.8333333 C3.33333333,6.69119771 6.69119771,3.33333333 10.8333333,3.33333333 C11.2935706,3.33333333 11.6666667,2.96023729 11.6666667,2.5 C11.6666667,2.03976271 11.2935706,1.66666667 10.8333333,1.66666667 Z"/>
+					<path fill-rule="nonzero" d="M33.3333333,27.5 C30.1116723,27.5 27.5,30.1116723 27.5,33.3333333 C27.5,33.7935706 27.873096,34.1666667 28.3333333,34.1666667 C28.7935706,34.1666667 29.1666667,33.7935706 29.1666667,33.3333333 C29.1666667,31.0321469 31.0321469,29.1666667 33.3333333,29.1666667 C33.7935706,29.1666667 34.1666667,28.7935706 34.1666667,28.3333333 C34.1666667,27.873096 33.7935706,27.5 33.3333333,27.5 Z" transform="rotate(180 30.833 30.833)"/>
+					<path fill-rule="nonzero" d="M37.5,28.3333333 C32.4373898,28.3333333 28.3333333,32.4373898 28.3333333,37.5 C28.3333333,37.9602373 28.7064294,38.3333333 29.1666667,38.3333333 C29.626904,38.3333333 30,37.9602373 30,37.5 C30,33.3578644 33.3578644,30 37.5,30 C37.9602373,30 38.3333333,29.626904 38.3333333,29.1666667 C38.3333333,28.7064294 37.9602373,28.3333333 37.5,28.3333333 Z" transform="rotate(180 33.333 33.333)"/>
+				</g>
+			</g>
+		</svg>
+	</div>
+</div>
+</header>
+
+<div id="popup-policy">
+	<div class="arr close js-close">
+		<svg class="circle">
+			<use xlink:href="#circle"></use>
+		</svg>
+		<svg class="icon">
+			<use xlink:href="#close"></use>
+		</svg>
+	</div>
+	<div class="container dbl-pad">
+		<div class="scroll-box">
+			<div class="title-block">
+				<h2>Условия передачи<br> информации</h2>
+			</div>
+			<div class="policy-text mCustomScrollbar">
+				<div class="description-text">
+					<p>В соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных», я свободно, своей волей и в своем интересе даю согласие на осуществление «Мосинвестстрой» (Закрытое акционерное общество) (далее – Общество), место нахождения: 119071, г. Москва, пр. Ленинский, д. 15А, обработки указанных в настоящем обращении моих персональных данных (сбора, записи, систематизации, накопления, хранения, уточнения (обновления, изменения), извлечения, использования, передачи, обезличивания, блокирования и уничтожения) с использованием/без использования средств автоматизации в целях обработки настоящего электронного обращения и направления/ предоставления ответа.</p>
+						<p>Предоставленные в Общество персональные данные подлежат уничтожению, либо обезличиванию по достижении указанных целей обработки или в случае утраты необходимости в достижении этих целей. Я понимаю и соглашаюсь с тем, что для прекращения использования Обществом моих персональных данных, мне необходимо обратиться в Общество для оформления отзыва Согласия на обработку моих персональных данных. В случае отзыва согласия на обработку персональных данных Общество вправе продолжить обработку персональных данных без моего согласия при наличии оснований, указанных в п. 2-11 ч. 1 ст. 6, ч. 2 ст. 10, ч. 2 ст. 11 Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных».</p>
+						<p>Согласен(-на) с тем, что Общество в целях уточнения информации, содержащейся в обращении, и информирования о ходе рассмотрения настоящего обращения может использовать сведения, содержащиеся в настоящем электронном обращении. Общество доводит Вашего сведения, что электронные обращения, направленные через сеть Интернет, передаются по незащищенным каналам связи. Общество не несет ответственности за сохранение конфиденциальности данных при их передаче через сеть Интернет.</p>				</div>
+			</div>
+			<div class="button-accept"><span>согласен с условиями</span></div>
+		</div>
+	</div>
+</div>
+
+<div id="main-menu">
+
+	<div class="menu-box js-menu-box">
+		<div class="menu">
+			<ul class="nav navbar-nav">
+	<li >
+	<a href="index.html">Главная</a>
+</li>
+<li >
+	<a href="public/visual.html">Выбор квартиры</a>
+</li>
+<li >
+	<a href="environment.html">Окружение</a>
+</li>
+<li >
+	<a href="tech.html">Тех. характеристики</a>
+</li>
+<li  class="active">
+	<a href="process.html">Ход строительства</a>
+</li>
+<li >
+	<a href="documentation.html">Документация</a>
+</li>
+<li >
+	<a href="news.html">Новости</a>
+</li>
+<li >
+	<a href="contact.html">Контакты</a>
+</li>
+</ul>
+		</div>
+		<div class="sub-menu">
+							<a class="presentation" target="_blank" href="uploads/files/presentation/fc737718068cfbf2d5203d3111ab1944.pdf" download="presentation"><span>СКАЧАТЬ ПРЕЗЕНТАЦИЮ</span><span class="sep"></span><span>4,08 МБ</span></a>
+						<form class="search-box js-search-box" action="https://yandex.ru/search/site/" method="GET">
+				<input type="hidden" name="lr" value="213" />
+				<input type="hidden" name="searchid" value="2300657" />
+				<input type="text" name="text" value="" />
+				<div class="search-trigger js-search-trigger">ПОИСК ПО САЙТУ</div>
+				<button class="search">ИСКАТЬ</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="site-box js-site-box">
+		<div class="site"></div>
+	</div>
+
+	<div class="language">
+		<span>РУ</span>		<span class="sep"></span>
+		<a href="process3450.html?back_url=aHR0cDovL2JhcmtsaWdhbGxlcnkucnUvcHJvY2Vzcz9xPSUyRnByb2Nlc3M*">EN</a>	</div>
+
+</div>
+
+<div id="request-form" class="js-popup-request-form">
+
+	<div class="left-panel js-left-panel">
+		<h2>Запишитесь<br/>на закрытый<br/>показ</h2>
+<!--		<span class="come">--><!--</span>-->
+		<span class="sep"></span>
+
+		<h2>ОФИС<br> ПРОДАЖ</h2>
+
+		<div class="address">Москва, Лаврушинский пер., 17, стр. 2</div>
+		<div class="phone comagic_phone2_link">+7 495 320-02-98</div>
+	</div>
+
+	<div class="right-panel js-right-panel">
+		<div class="form-wrap">
+			<form action="http://barkligallery.ru/send/request_form.json" method="POST">
+				<div class="thank-box">
+					<div class="thank-title">Спасибо</div>
+					<div class="thank-note">Мы свяжемся с Вами в ближайшее время</div>
+				</div>
+				<div class="title"></div>
+
+				<fieldset>
+
+					<div class="input brd name">
+						<input type="text" name="name" value="" data-validator="name" />
+						<span class="placeholder">Ваше имя</span>
+					</div>
+
+					<div class="input brd phone">
+						<input type="text" name="phone" value="" data-validator="phone" />
+						<span class="placeholder">Телефон</span>
+					</div>
+
+					<div class="input brd message">
+						<input type="text" name="message" />
+						<span class="placeholder">Расскажите, что вас интересует</span>
+					</div>
+
+				</fieldset>
+
+				<fieldset>
+					<div class="input checkbox agree js-checkbox modal-check">
+						<input id="popup_rf_agree_cb" type="checkbox" name="agree" value="1" data-validator="agree" />
+						<label for="popup_rf_agree_cb">Я согласен с 						<a href="#" class="js-popup-policy-trigger" data-accept="modal-check" onclick="window.event.preventDefault();return false;">условиями передачи информации</a></label>
+					</div>
+				</fieldset>
+
+				<button class="submit">
+					<div class="caption js-caption"><span>оставить заявку</span></div>
+					<div class="check js-check">
+						<svg>
+							<use xlink:href="#check"></use>
+						</svg>
+					</div>
+					<div class="line-box js-line">
+						<div class="line"></div>
+					</div>
+				</button>
+
+			</form>
+		</div>
+
+		<div class="arr close js-close">
+			<svg class="circle">
+				<use xlink:href="#circle"></use>
+			</svg>
+			<svg class="icon">
+				<use xlink:href="#close"></use>
+			</svg>
+		</div>
+	</div>
+
+</div>
+
+<div class="slider-popup" style="display: none">
+
+</div>
+
+<div id="email-form" class="js-popup-email-form">
+	<div class="right-panel js-right-panel">
+		<div class="form-wrap">
+			<form action="send/request_email_form.json" method="POST">
+				<div class="thank-box">
+					<div class="thank-title">Спасибо</div>
+					<div class="thank-note">Мы отправили письмо на вашу почту</div>
+				</div>
+				<div class="title"></div>
+
+				<fieldset>
+					<div class="input brd email">
+						<input type="text" name="email" value="" data-validator="email" />
+						<input type="hidden" name="flat_id" value=""/>
+						<span class="placeholder">E-mail</span>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<div class="input checkbox agree js-checkbox email-check">
+						<input id="email_plan_agree_cb" type="checkbox" name="agree" value="1" data-validator="agree" autocomplete="off" />
+						<label for="email_plan_agree_cb">Я согласен с 							<a href="#" class="js-popup-policy-trigger" data-accept="email-check" onclick="window.event.preventDefault();return false;">условиями передачи информации</a></label>
+					</div>
+				</fieldset>
+
+				<button class="submit">
+					<div class="caption js-caption"><span>отправить планировку на почту</span></div>
+					<div class="check js-check"><svg><use xlink:href="#check"></use></svg></div>
+					<div class="line-box js-line"><div class="line"></div></div>
+				</button>
+
+			</form>
+		</div>
+	</div>
+	<div class="arr close js-close">
+		<svg class="circle">
+			<use xlink:href="#circle"></use>
+		</svg>
+		<svg class="icon">
+			<use xlink:href="#close"></use>
+		</svg>
+	</div>
+</div>
+
+
+
+<div id="screen" class="contentFixed">
+	<div id="content">
+
+<section class="gallery-block">
+	<div class="container dbl-pad">
+		<h2>Jewelry Collections</h2>
+		<ul class="year-switcher">
+							<li class="year">
+					<span>COLLECTIONS</span>
+					<ul>
+													<li class="month" data-name="assets/public/json/preview/new.json" data-slider="assets/public/json/sliders/new.json">NEW</li>
+													<li class="month" data-name="assets/public/json/preview/rinds.json" data-slider="assets/public/json/sliders/rings.json">RINGS</li>
+													<li class="month" data-name="assets/public/json/preview/earrings.json" data-slider="assets/public/json/sliders/earrings.json">EARRINGS</li>
+													<li class="month" data-name="assets/public/json/preview/pendants.json" data-slider="assets/public/json/sliders/pendants.json">PENDANTS</li>
+													<li class="month" data-name="assets/public/json/preview/neklases.json" data-slider="assets/public/json/sliders/necklases.json">NECKLASES</li>
+											</ul>
+				</li>
+					</ul>
+
+		<div class="process-content">
+			
+<div class="photos">
+	<ul class="clearfix">
+					<li><img onerror="this.src='assets/public/images/placeholders/earr1m.png'" src="assets/public/images/earr/earr1.jpg"  width="300" height="300" alt=""></li>
+					<li><img onerror="this.src='assets/public/images/placeholders/300x300.png'" src="assets/public/images/earr/earr2.jpg"  width="300" height="300" alt=""></li>
+					<li><img onerror="this.src='assets/public/images/placeholders/300x300.png'" src="assets/public/images/earr/earr3.jpg"  width="300" height="300" alt=""></li>
+					<li><img onerror="this.src='assets/public/images/placeholders/300x300.png'" src="assets/public/images/earr/earr4.jpg"  width="300" height="300" alt=""></li>
+			</ul>
+</div>
+
+		</div>
+	</div>
+</section>
+	</div>
+</div>
+
+<section class="footer-compensator"></section>
+<section class="index-footer js-index-footer">
+	<div class="translator">
+		<div class="container">
+			<ul class="footer-menu">
+				<li><a href="news.html">Новости</a></li>
+				<li><a href="process.html">Ход строительства</a></li>
+				<li><a href="documentation.html">Документы</a></li>
+				<li><a href="tech.html">Технические характеристики</a></li>
+			</ul>
+
+			<p class="copyright">Любая информация, представленная на&nbsp;данном сайте, носит исключительно информационный характер<br/>и&nbsp;ни&nbsp;при каких условиях не&nbsp;является публичной офертой, определяемой положениями статьи 437&nbsp;ГК РФ.</p>
+
+			<p class="copyright">© 2023 «OlgaLaut.com»</p>
+
+			<div class="language">
+				<span>РУ</span>				<span class="sep"></span>
+				<a href="process3450.html?back_url=aHR0cDovL2JhcmtsaWdhbGxlcnkucnUvcHJvY2Vzcz9xPSUyRnByb2Nlc3M*">EN</a>			</div>
+		</div>
+
+		<div class="footer-logo-box">
+			<svg class="logo-barkli">
+				<use xlink:href="#logo-barkli"></use>
+			</svg>
+			<p class="developer">Дизайн и разработка &mdash;
+				<a href="http://www.greencow.ru/" target="_blank" rel="nofollow">Greencow</a></p>
+		</div>
+
+		<div class="joker js-footer-joker">
+			<div class="joker-box js-joker-box"><img src="assets/public/images/footjoker.jpg"></div>
+		</div>
+	</div>
+</section>
+
+
+
+<div class="BarkliLoader js-barkli-loader">
+	<div class="loader-line js-loader-line"></div>
+</div>
+
+<script type="text/javascript" src="assets/common/js/embedded.js"></script>
+<script type="text/javascript" src="assets/public/js/process.js"></script>
+
+
+<script src="assets/public/js/interior-slider.js"></script>
+
+</body>
+
+</html>
