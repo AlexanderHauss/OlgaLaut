@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Создано Microsoft Visio 11.0, Экспорт SVG, версия 1.0 close.svg svg/ui/cross -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="0.25in"
+		height="0.25in" viewBox="0 0 18 18" xml:space="preserve" color-interpolation-filters="sRGB" class="st2">
+	<v:documentProperties v:langID="1033" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#333333;stroke:#684f00;stroke-linecap:butt;stroke-width:0.75}
+		.st2 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs/>
+		<title>svg/ui/cross</title>
+		<desc>Created with Sketch.</desc>
+		<v:pageProperties v:drawingScale="1" v:pageScale="1" v:drawingUnits="19" v:shadowOffsetX="9" v:shadowOffsetY="-9"/>
+		<g id="group1-1" transform="translate(2.10571,-2.10571)" v:mID="1" v:groupContext="group">
+			<title>menu-burger</title>
+			<g id="shape2-2" v:mID="2" v:groupContext="shape" transform="translate(-11.6673,5.27208) rotate(-45)">
+				<title>Rectangle</title>
+				<rect x="0" y="16.5" width="18" height="1.5" class="st1"/>
+			</g>
+			<g id="shape3-4" v:mID="3" v:groupContext="shape" transform="translate(12.7279,-7.45584) rotate(45)">
+				<title>Rectangle-Copy</title>
+				<rect x="0" y="16.5" width="18" height="1.5" class="st1"/>
+			</g>
+		</g>
+	</g>
+</svg>

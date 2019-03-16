@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Создано Microsoft Visio 11.0, Экспорт SVG, версия 1.0 triangle.svg Страница-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="8.34615in"
+		height="4.658in" viewBox="0 0 600.923 335.376" xml:space="preserve" color-interpolation-filters="sRGB" class="st2">
+	<v:documentProperties v:langID="1033" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#684f00;stroke:#684f00;stroke-linecap:butt;stroke-width:0.612}
+		.st2 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>Страница-1</title>
+		<v:pageProperties v:drawingScale="1" v:pageScale="1" v:drawingUnits="19" v:shadowOffsetX="9" v:shadowOffsetY="-9"/>
+		<g id="group1-1" transform="translate(0.612,-0.612)" v:mID="1" v:groupContext="group">
+			<title>Лист.1</title>
+			<g id="shape2-2" v:mID="2" v:groupContext="shape">
+				<title>Лист.2</title>
+				<path d="M316.04 17.38 L299.88 1.22 L283.72 17.38 L0 323.93 L14.63 335.38 L585.07 335.38 L599.7 323.99 L316.04 17.38
+							 Z M43.7 312.55 L299.88 33.54 L556.06 312.55 L43.7 312.55 Z" class="st1"/>
+			</g>
+		</g>
+	</g>
+</svg>
